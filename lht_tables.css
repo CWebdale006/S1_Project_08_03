@@ -19,6 +19,7 @@
 */
 @media only screen and (max-width: 640px) {
 
+    /*Displays as block, allowing for a two column display*/
     table,
     tbody,
     tr,
@@ -28,6 +29,7 @@
         display: block;
     }
 
+    /*Hides repetitive information on mobile view. */
     td h1 {
         display: none;
     }
@@ -36,6 +38,7 @@
         display: none;
     }
 
+    /*Displays the caption in white text on a medium gray background with a font size of 1.5 em and line height of 2 em. */
     table caption {
         color: white;
         background-color: rgb(41, 41, 41);
@@ -43,6 +46,7 @@
         line-height: 2em;
     }
 
+    /*Adds a border to data cells. Changes text color, applies relative positioning, and sets a minimum height. */
     td {
         border: 1px dotted gray;
         color: rgb(11, 12, 145);
@@ -51,13 +55,15 @@
         min-height: 40px;
     }
 
+    /*Displays each week in an alternating color. */
     tr:nth-of-type(odd) {
         background-color: rgb(255, 235, 178);
         border: 2px solid gray;
     }
 
+    /*Displays the data-date atribute before each data cell. */
     table td:before {
-        content: attr(data-Date);
+        content: attr(data-date);
         position: absolute;
         left: 0;
         top: 0;
@@ -66,7 +72,13 @@
     }
 }
 
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
 @media only screen and (min-width: 641px) {
+
+    /*Displays a background image behind the calendar, with no tiling and positioned in the bottom right corner. Adds a double border. Collapses the borders, centers the table, and uses a fixed layout. */
     table {
         background-image: url(lht_photo1.png);
         background-repeat: no-repeat;
@@ -79,6 +91,7 @@
         width: 85%;
     }
 
+    /*Adds a border to table head and table data cells, sets the font size to 0.85 em with normal weight, adds a 5 pixel padding space, aligns the text to the top of the cell, and sets the width. Allows the browser to wrap cell text. */
     th,
     td {
         border: 1px solid gray;
@@ -90,35 +103,30 @@
         word-wrap: break-word;
     }
 
+    /*Applies a semi-transparent background color and changes text color. */
     td {
         background-color: rgba(171, 171, 171, 0.6);
         color: rgb(11, 12, 145);
     }
 
+    /*Changes all data cells which data-date contains the word 'feb' to appear different from other months. */
     td[data-date~="Feb"] {
         background-color: rgba(232, 214, 148, 0.6);
         box-shadow: inset 0px 0px 20px gray;
     }
 
+    /*Displays the caption at the top of the table, centers caption text, adds 10 pixels to the bottom padding, and sets the font size to 1.2 em. */
     table caption {
-        /*top of table*/
+        caption-side: top;
         text-align: center;
         padding-bottom: 10px;
         font-size: 1.2em;
         kerning: 3px;
     }
 
+    /*Changes the background and text color for heading cells within the table header. */
     thead th {
         background-color: rgb(154, 64, 3);
         color: white;
     }
 }
-
-
-
-
-
-/* =============================================
-   Tablet and Desktop Styles: greater than 640px
-   =============================================
-*/

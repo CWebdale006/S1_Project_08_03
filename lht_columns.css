@@ -14,6 +14,7 @@
 */
 
 /* Column Styles */
+/*Sets the column width to 260 pixels, sets the column gap to 20 pixels, and adds a 1 pixel dividing line between columns, including progresssive enhancement. Sets the minimum size of widoes and orphans to 2 lines. */
 article {
     -moz-column-width: 260px; 
     -webkit-column-width: 260px; 
@@ -31,6 +32,7 @@ article {
     orphans: 2; 
 }
 
+/*Allows the h1 of the article to span all columns. */
 article h1 {
     column-span: all; 
 }
